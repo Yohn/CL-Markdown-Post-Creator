@@ -20,12 +20,12 @@ $config = [
 ```
 
 ```bash
-php .yo-create
+php vendor/bin/.yo-create
 ```
 ## To Specify Your Own Settings
 
 ```bash
-php .yo-create --config altConfig.php
+php vendor/bin/.yo-create --config altConfig.php
 ```
 
 ## Frontmatter Example:
