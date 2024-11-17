@@ -1,6 +1,11 @@
 # Command line Markdown Post Creator
 A simple way to create a Markdown blog, page, or gallery post in markdown format with the yaml frontmatter, and a basic start for your next new post.
 
+## Install via Composer
+```bash
+composer require yohn/cl-markdown-post-creator
+```
+
 ## Create a new blog, page, or gallery
 > I will will need to work on the gallery some more
 
