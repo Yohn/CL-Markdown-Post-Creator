@@ -1,0 +1,32 @@
+#!/usr/bin/env php
+<?php
+
+use Yohns\Command\MarkdownPostCreator;
+
+require_once 'vendor/autoload.php';
+
+// Check if an argument is provided for config file
+$config = null;
+foreach($argv as $index => $arg){
+	if ($arg === '--config') {
+		// Assuming the next argument is the config file path
+		$configFile = $argv[$index + 1] ?? null;
+		if(is_file($configFile)){
+			$config = include($configFile);
+		}
+		break;
+	}
+}
+
+// If config file is not provided, you can set a default or handle the absence
+if($config === null){
+	$config = [
+		'timezone' => 'EST',
+		'blogDirectory' => 'content/blog',
+		'pageDirectory' => 'content/page',
+		'galleryDirectory' => 'content/gallery',
+	];
+}
+
+$markdownPostCreator = new MarkdownPostCreator($config);
+$markdownPostCreator->run();

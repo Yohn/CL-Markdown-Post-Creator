@@ -1,0 +1,39 @@
+{
+	"name": "yohn/cl-markdown-post-creator",
+	"description": "A simple way to create a Markdown blog, page, or gallery post in markdown format with the yaml frontmatter, and a basic start for your next new post.",
+	"keywords": ["command-line","cli","create-posts","create-markdown","markdown","blog","gallery","pages","posts"],
+	"minimum-stability":"stable",
+	"license": "MIT",
+	"type": "library",
+	"require": {
+		"php": ">=8",
+		"myjw3b/helpful": "^2.0",
+		"symfony/yaml": "^7.1"
+	},
+	"config": {
+		"preferred-install": "dist",
+		"sort-packages": true,
+		"optimize-autoloader": true
+	},
+	"authors": [{
+		"name": "John Brittain III",
+		"email": "Yohn@coming-soon.com",
+		"homepage": "https://github.com/Yohn",
+		"role": "Developer"
+	}],
+	"bin": [
+		"bin/.yo-create"
+	],
+	"autoload": {
+		"psr-4": {
+			"Yohns\\": "Yohns"
+		}
+	},
+	"scripts": {
+		"create": "yohns-create",
+		"analyse": "phpstan analyse",
+		"test": "phpunit tests",
+		"phpdoc": "phpdoc-md",
+		"dump": "composer dump-autoload"
+	}
+}
